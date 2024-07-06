@@ -1,0 +1,298 @@
+PATTERNS
+
+1.public class snippet {
+    public static void main(String[] args) {
+        int n=4;
+        for(int i=1;i<=n;i++){
+           
+                System.out.println("*");
+            }
+        }
+        
+    }
+   //OUTPUT
+    *
+    *
+    *
+    *
+2. public class snippet {
+    public static void main(String[] args) {
+       
+        for(int i=1;i<=4;i++){
+            for(int j=1;j<=4;j++){
+           
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+    }
+    
+}
+     OR 
+2-->public class snippet {
+    public static void main(String[] args) {
+       
+        for(int i=1;i<=4;i++){
+            
+                System.out.print("****
+
+
+");
+            }
+}
+}
+
+#output
+****
+****
+****
+****
+3.public class snippet {
+    public static void main(String[] args) {
+       
+        for(int i=1;i<=4;i++){
+            for(int j=1;j<=4;j++){
+           
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+        
+    }
+    
+}
+
+#output
+1111
+2222
+3333
+4444
+4.public class snippet {
+    public static void main(String[] args) {
+       
+        for(int i=1;i<=4;i++){
+            for(int j=1;j<=4;j++){
+           
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+        
+    }
+    
+}
+#output
+1234
+1234
+1234
+1234
+5.public class snippet {
+    public static void main(String[] args) {
+       
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=i;j++){
+           
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+    }
+    
+}
+
+#output
+*
+**
+***
+****
+*****
+6.public class snippet {
+    public static void main(String[] args) {
+       
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=i;j++){
+           
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+        
+    }
+    
+}
+#output
+1
+12
+123
+1234
+12345
+.
+7.public class snippet {
+    public static void main(String[] args) {
+       
+        for(int i=5;i>=1;i--){
+            for(int j=1;j<=i;j++){
+           
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+        
+    }
+    
+}
+
+12345
+1234
+123
+12
+1
+
+8.public class snippet {
+    public static void main(String[] args) {
+       
+        for(int i=5;i>=1;i--){
+            for(int j=1;j<=i;j++){
+           
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+    }
+    
+}
+output
+*****
+****
+***
+**
+*
+9. public class pattern {
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=5;j++){
+                if(j==1 || j==5 || i==1|| i==5){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+                System.out.println();
+            }
+        }
+    }
+    
+Output
+*****
+*   *
+*   *
+*   *
+*****
+
+10.LEAP YEAR
+import java.util.Scanner;
+public class leapyeaAr {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter  a Year");
+        int year=sc.nextInt();
+        if(year%400==0){
+            System.out.println(year+ " is a leap year");
+        }
+         else if(year%4==0 && year%100!=0){
+            System.out.println(year + "is  a leap year");
+        }
+        else{
+            System.out.println(year + "is not a lep year");
+        }
+        
+
+        }
+
+    }
+
+11.import java.util.Scanner;
+public class even {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a number");
+        int num=sc.nextInt();
+        if(num>0){
+            System.out.println(+num +" is a positive number.");
+        }
+        else if(num<0){
+            System.out.println(+num+ " is a negative number.");
+        }
+        else{
+            System.out.println(+num+ " is Zero.");
+        }
+        }
+    }
+
+
+    12. //develop  a java application that prints the season based on the month number
+
+import java.util.Scanner;
+public class crops {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter month number");
+        String s=" ";
+        int month=sc.nextInt();
+        switch(month){
+            case 12,1,2 :
+            s="winter";
+            break;
+            
+            case 3,4,5 :
+            s="spring";
+            break;
+            
+            case 6,7,8 :
+            s="summer";
+            break;
+           
+        
+            case 9,10,11 :
+            s="Fall";
+            break;
+            
+            default:System.out.println("Invalid Month");
+        }
+        System.out.println("The month "+ month + " corresponds to "+ s);
+        
+    }
+    
+}
+
+
+13.vowel /consonant
+import java.util.Scanner;
+public class vowel {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a alphabet");
+        char ch=sc.next().charAt(0);
+        //char ch='v';
+        if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'||ch=='A' || ch=='E'|| ch=='I' || ch=='O' || ch=='U'){
+            System.out.println(ch+ " is a vowel");
+        }
+        else if(ch>='a' && ch<='z'  || ch>='A'  && ch<='Z')
+        {
+            System.out.println(ch+ " is a consonant");
+        }
+        else{
+            System.out.println(ch+ " is not a valid alphabet");
+
+        }
+        
+
+        
+    }
+    
+}
+
