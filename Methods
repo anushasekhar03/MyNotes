@@ -1,0 +1,50 @@
+1---> Return value and accept parameters
+public class method {
+    public static int findSum(int n1,int n2){
+        int sum=n1+n2;
+        return sum;
+    }
+    public static void main(String[] args) {
+        int res=findSum(50,20);
+        System.out.println("sum is : "  +res);
+    }
+    
+}
+
+2--> Return value but don't accept parameters
+public class method {
+    public static float calculateInterest(){
+        int p=10000;
+        float r=10.5F;
+        int t=3;
+        float si=(p*t*r)/100;
+        return si;
+    }
+    public static void main(String[] args) {
+        float res=calculateInterest();
+        System.out.println("interest is  : "  +res);
+    }
+    
+}
+
+3--> No Return value and don't  accept parameters
+public class method {
+    public static void main(String[] args) {
+        greet();
+    }
+    public static void greet(){
+        System.out.println("i will get a job");
+    }
+}
+4-->// No Return value and don't  accept parameters
+public class method {
+    public static void main(String[] args) {
+        announceQuizTopic("methods");
+        
+    }
+    public static void announceQuizTopic(String topic){
+        System.out.println("quiz will be on :  " +topic);
+    } 
+    }
+
+
