@@ -1,0 +1,22 @@
+->A variable is a name given to memory location for easily access of data
+->Variables can keep changing value depending upon the instructions given by the programmer
+->for declaring variable in java we use 'var' keyword
+->By using var keyword it will be capable of storing any type of data.
+//code snippet
+public class Hellojva {
+    public static void main(String[] args) {
+        var name="anu";
+        var age=34;
+        System.out.println("Name is"+ name);
+        System.out.println("age is "+age);
+    }
+
+OPERATORS
+->Operators are special symbols that perform specific operations on one,two or three operands and return their result.
+TYPES:
+1.Arithmetic operator
+2.Relational operator
+3.Logical operator
+4.Bitwise operator
+4.Ternary operator
+    
