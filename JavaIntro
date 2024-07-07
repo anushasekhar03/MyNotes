@@ -1,0 +1,24 @@
+Java is a programming Language used to develop backend of an application.
+FEATURES
+->Object oreinted
+->It has WORA property
+->platform independent, Portable, architecture neutral
+->Java is also considered highly secured
+
+FIRST PROGRAM
+public class Hellojva { //scope of thye main
+    public static void main(String[] args) 
+    {
+        System.out.println("I will get a Job"); // Scope of the class
+    }
+}
+
+FLOW OF A PROGRAM
+In java there are two phases in the flow of a program  1.Compilation Phase 2.Execution Phase
+->In compilation Phase Source code(.java)(HLL) is converted in byte code(.class)(ILL) by the java compiler.
+->In Execution phase byte code is converted into Machine level language i.e.,0's and 1's by JVM.
+
+
+JAVAS ARCHITECTURE
+->In javas architecture there are JDK, JRE, JVM, JavaC, class libraries, jar files,javadoc,class loader, byte code verifier, javas interpreter.
+->JDK:
