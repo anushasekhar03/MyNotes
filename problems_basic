@@ -1,0 +1,62 @@
+1-->the sum of odd numbers between 1 and 50
+public class oddsum {
+    public static void main(String[] args) {
+        int sum=0;
+        for(int i=1;i<=50;i++){
+            if(i%2!=0){
+                sum=sum+i;
+                
+            }
+            
+        }
+        System.out.println("The sum of odd numbers between 1 nd 100 is " + sum);
+        
+
+    }
+    
+}
+
+
+2-->develop a jav app toassign a category to a given temperature
+import java.util.*;
+public class temp {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter temperature");
+        double temp=sc.nextDouble();
+
+        if(temp<0){
+            System.out.println("The temperature " + temp + " is categorized as Freezing");
+        }
+        else if(temp>=0 && temp<=15){
+            System.out.println("The temperature " + temp + " is categorized as Cold");
+
+        }
+        else if(temp>=16 && temp<=25 ){
+            System.out.println("The temperature " + temp + " is categorized as Moderate");
+        }
+        else if(temp<=26 && temp>=35){
+            System.out.println("The temperature " + temp + " is categorized as Warm");
+        }
+        else{
+            System.out.println("The temperature " + temp + " is categorized as Hot");
+        }
+        
+    }
+    
+}
+
+3-->sum of  sqaures of the first 20 natural numbers
+public class sumofsquares {
+    public static void main(String[] args) {
+        int sqaure_sum=0;
+        for(int i=1;i<=20;i++){
+            sqaure_sum+=i*i;
+
+        }
+        System.out.println("the sum of  sqaures of the first 20 natural numbers is :"+sqaure_sum);
+    }
+    
+}
+
+
