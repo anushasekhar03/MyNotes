@@ -1,1 +1,121 @@
+INTRODUCTION TO TREE
+--> Tree is a non-linear data structure which stores data in hierarchical manner.
+-->It has central node ,structural node and sub nodes which are connected by edges
+--> We can also say that it has a root node,branches and leaves.The top most node in a tree is called root node and the bottom
+   nodes are called leaves. It is like a recursive Structure
+
+PROPERTIES OF A TREE
+a-> Parent and Child Nodes
+b->size of a tree=Total no.of Nodes in a tree
+c->Edge :Two nodes connected by a line
+d->Siblings : If two childresn have same parents then those are siblings
+e->Height: Max no.of edges between nodes
+f->leaf nodes: Bottom nodes
+g->level: Height of root-height of node
+Note: level of rooe node is zero
+h->degree:it is either 0,1,or 2
+
+REPRESENTATION OF A NODE IN TREE:
+private class Node{
+		int value;
+		Node left;
+		Node right;
+		public Node(int value) {
+			this.value = value;	
+		}
+}
+
+Why trees?
+->The time complexity of tree in deletion, insertion ,reverse, Traversl etc..is O(log(n)).i.e.,efficiently wecan add and 
+ del elements in a tree
+->In trees the order of storing is in ordered manner i.e.,in left of node all are small elements and in right all are in
+ large elements.
+->Cost efficeint
+
+APPLOCATIONS OF TREES:
+-> Used in File systems/ folders
+->Used ijn Databases
+->Used in Algorithm networking
+->Used to solve complex Mathematical problems 
+->Decision trees-Used in Machine learning
+->Compression of Files-Huffman Coding
+->Used in Adv DS like heaps, graphs, trees etc..
+
+TYPES of Binary trees
+1. COMPLETE BINARY TREE- All the levels are full apart fromlast level but in last level is fill from left to right
+2. FULL/STRICT BINARYTREE-Each node has either zero or two children. USECASE-Huffman coding in compression
+3. PERFECT BINARYTREE-All the internal nodes have two children and all leaf nodes are in the same level
+4. HEIGHT BALANCED TREE- It has avg height O(log(n))
+5. SKEWED BINARY TREE-Every node has only one child, height=O(n)
+6. ORDERED BINARY TREE-Node has some property like Binray search tree(left=small, right=large)
+
+IMPLEMENTATION OF BINARY TREE 
+package Implementation;
+import java.util.Scanner;
+public class BTree {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		BinaryTree tree=new BinaryTree();
+		tree.populate(sc);
+		tree.display();
+	}
+}
+class BinaryTree{
+	 private  Node root;
+	public BinaryTree() {	
+	}
+private class Node{
+		 int value;
+		Node left;
+		Node right;
+		public Node(int value) {
+			this.value = value;	
+		}
+}
+	public  void populate(Scanner sc) {
+		System.out.println("Enter the root node");
+		int value=sc.nextInt();
+		root=new Node(value);
+		populate(sc,root);
+	}
+	 private  void populate(Scanner sc,Node node) {
+		System.out.println("Do you want to enter left of" +node.value);
+		boolean left=sc.nextBoolean();
+		if(left) {
+		System.out.println("Enter the value of the left of "+ node.value);
+		int leftValue=sc.nextInt();
+		node.left=new Node(leftValue);
+		populate(sc,node.left);
+		}
+		System.out.println("Do you want to enter right of " +node.value);
+		boolean right=sc.nextBoolean();
+		if(right) {
+		System.out.println("Enter the value of right of "+ node.value);
+		int rightvalue=sc.nextInt();
+		node.right=new Node(rightvalue);
+		populate(sc,node.right);
+	}
+}
+	 public void display() {
+		 display(root , " ");
+	 }
+	 private void display(Node node,String indent) {
+		 if(node==null) {
+			 return;
+		 }
+		 System.out.println(indent + node.value);
+		 display(node.left, indent + "\t");
+		 display(node.right, indent + "\t");
+	 }	
+	}
+
+
+
+
+
+
+
+
+
+
 
