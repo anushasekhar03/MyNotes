@@ -19,4 +19,49 @@ TYPES:
 3.Logical operator
 4.Bitwise operator
 4.Ternary operator
+
+public class opertaor {
+    public static void main(String... args) {
+    var a=15;
+    var b=3;
+    System.out.println("a = "  +a);
+    System.out.println("b = "  +b);
+  
+    System.out.println("a + b = " + (a+b));
+    System.out.println("a - b = " +(a-b) );
+    System.out.println("a * b = " +(a*b));
+    System.out.println("a / b = " +(a/b));
+    System.out.println("a % b = " +(a%b));
+    System.out.println(5 +10);
+    System.out.println(10 + "5");
+    System.out.println("Ten " + "Five");
+    System.out.println("ten" +5);
+}
+}
+
+
+Relational Operators
+public class opertaor {
+    public static void main(String... args) {
+    var a=10;
+    var b=5;
+    var c=15;
+    var d=10;
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
+    System.out.println(d);
+
+    System.out.println("a<b ="+(a<b));
+    System.out.println(a<c);
+    System.out.println(a<d);
+    System.out.println(a>b);
+    System.out.println(a>c);
+    System.out.println(a>d);
+    System.out.println(a==b);
+    System.out.println(a==c);
+    System.out.println(a==d);
+    }
+}
+
     
