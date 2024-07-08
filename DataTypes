@@ -13,3 +13,26 @@ TYPE CASTING -Converting one data type to another data type
 1.Implicit/Widening TC-Coverting a smaller data type into a bigger one, it will automatically compiler will converts it
 2.Explicit/Narrowing TC-Coverting a bigger data type into a smaller one,it happens only when programmer externally instructs compiler
 to perfor, conversion. It results in loss of memory
+
+DEFUALT VALUES FOR DATATYPES
+public class program {
+    private static byte b;
+    private static short s;
+    private static int i;
+    private static long l;
+    private static char c;
+    private static boolean bool;
+    private static  float f;
+    private static double d;
+   
+    public static void main(String[] args) {
+        System.out.println(b);   //0
+        System.out.println(s);    //0
+        System.out.println(i);   //0
+        System.out.println(l);   //0
+        System.out.println(c);
+        System.out.println(bool);   //false
+        System.out.println(f);    //0.0
+        System.out.println(d);  //0.0
+    }
+}
