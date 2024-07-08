@@ -1,0 +1,97 @@
+These are the control Constructs which are used to excute instructions Only under given Scenrios.
+There are four tyoes of statements.
+1. simple-if
+2. if-else
+3. else -if Ladder
+4. Switch-Case
+
+1. simple-if
+It executes only under one condition
+Syntax: if(condition)
+     {
+       //Statemnets
+     }
+Code :
+public class kn {
+    public static void main(String... args) {
+        int a=10;
+        if(a>=10){
+            System.out.println("hii");
+
+        }
+        
+    }
+}
+
+
+2.if-else
+When the condition is true if bock will excute and when the condition is false else block will be excuted.Only one
+block will be excuted at a time for one situation.
+Syntax :
+if(condtion){
+//statemnts
+}
+else{
+//statements
+}
+
+code:
+public class kn {
+    public static void main(String... args) {
+        int a=6;
+        if(a>=10){
+            System.out.println("hii");
+
+        }
+        else{
+            System.out.println("hello");
+        }
+        
+    }
+}
+
+3.else if ladder
+It is used when we want specify actions for multiple scenarios.It is excuted from top to bottom and it will execute the
+true block condition at first.
+if 1st have true condition and after all the blocks will be skipped.
+Syntax:
+if(condtion){
+//statemnts
+}
+else if{
+//statements
+}
+else if{
+//statements
+else if{
+//statements
+.
+.
+.
+.
+else{
+//Stamts
+}
+
+
+4.Switch Case
+It can be executed whwn we want to execute statemnts depending upon specific values.
+Syntax:
+Switch(value)
+{
+case value 1:
+//stamts
+break;
+case value 2:
+//stamts
+break;
+case value 3:
+//stamts
+break;
+.
+.
+.
+default:
+//stamts
+}
+
