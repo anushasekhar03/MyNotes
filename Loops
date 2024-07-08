@@ -1,0 +1,37 @@
+Loops in java are used to execute a particular part of the program repeatedly until the condition to be true.
+->there are three loops. 1.For loop 2.while loop 3.do-while loop
+1.For loop
+public class kn {
+    public static void main(String... args) {
+        int a=1;
+        for(int i=1;i<a;i++){
+        System.out.println("Hello");
+    }
+}
+}
+2.while loop
+public class kn {
+    public static void main(String... args) {
+        int a=10;
+        while(a>5)
+        {
+        System.out.println("Hello");
+    }
+}
+}
+3.do-while loop
+public class kn {
+    public static void main(String... args) {
+        int a=10;
+        do{
+            System.out.println("Hello");
+        }
+        while(a<5);
+        
+    }
+}
+
+How is the do while loop is different from for and while loop?
+->do while loop is an exit control loop that means the condition will checked once the control tries to exit the loop so, dowhile loop will be excuted atleasat once even 
+condition is false.
+->for and while loop, the condition is checked when the control tries to enter the loop So,if initial condition is false control will come outside the loop
