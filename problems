@@ -1,4 +1,4 @@
-Problem Statement
+1.Problem Statement
 
 You need to develop a simple Java application to convert a decimal number to its binary equivalent.
 A decimal number can be converted to binary by repeatedly dividing the number by 2 and recording the remainders. The binary equivalent is the sequence of remainders read
@@ -64,9 +64,184 @@ public class series {
             System.out.print(fibo + " ");
             a=b;
             b=fibo;
-
-
         }
     }
     
 }
+
+3.Problem Statement(Euclidean algo)
+You need to develop a simple Java application to find the greatest common divisor (GCD) of two given numbers.
+The greatest common divisor (GCD) of two numbers is the largest positive integer that divides both numbers without leaving
+a remainder. For example, the GCD of 8 and 12 is 4.
+Task: Find the GCD of Two Given Numbers
+• Use Scanner to take user input for the two numbers.
+• Use the Euclidean algorithm to find the GCD of the two numbers.
+The Euclidean algorithm is an efficient method for finding the GCD of two numbers. The algorithm is based on the principle 
+that the GCD of two numbers also divides their difference. The steps are as follows:
+a. Given two numbers, a and b, where a > b, divide a by b.
+b. If the remainder (r) is 0, then b is the GCD.
+c. If the remainder is not 0, then set a to b and b to r, and repeat the process until the remainder is 0.
+import java.util.Scanner;
+public class GCD {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter two numbers" );
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int res=findGCD(a, b);
+        System.out.println("GCD of " + a + " "+ b + " is " + res);
+    }
+    static int findGCD(int a,int b){
+        while(b%a!=0){
+            int rem=b%a;
+            b=a;
+            a=rem;
+        }
+        return a;    
+    }  
+}
+
+4.Problem Statement
+You need to develop a simple Java application to find the smallest digit in a given number.
+Task: Find the Smallest Digit in a Given Number
+• Use Scanner to take user input for the number.
+• Initialize a variable to store the smallest digit.
+• Use a while loop to extract each digit from the number.
+• Compare each digit with the current smallest digit and update the smallest digit accordingly.
+• Print the smallest digit.
+Expected Output:
+• Input: 45932
+Output: The smallest digit in 45932 is 2.
+• Input: 981273
+
+import java.util.Scanner;
+public class smallest {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number" );
+        int a=sc.nextInt();
+        int smallest=9;
+        while(a>0){
+            int digit=a%10;
+            if(digit<smallest){
+                smallest=digit;
+            }
+           a=a/10;
+        }
+        System.out.println(smallest);
+        
+    }
+    
+}
+
+5.Problem Statement
+You need to develop a simple Java application to check if a given number is a perfect square.
+Perfect Square Explanation:
+A perfect square is an integer that is the square of an integer. In other words, it is the product of some integer with 
+itself. For example, 1, 4, 9, 16, and 25 are perfect squares.
+Task: Check if a Given Number is a Perfect Square
+• Use Scanner to take user input for the number.
+• Calculate the square root of the number.
+• Check if the square of the calculated square root is equal to the original number.
+• If it is, the number is a perfect square. Print an appropriate message.
+• If it is not, print an appropriate message.
+Expected output:
+• Input: 25
+Output: 25 is a perfect square.
+• Input: 26
+Output: 26 is not a perfect square.
+
+import java.util.Scanner;
+public class perfectsqaure {
+    public static void main(String[] args) {
+         Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number" );
+        int a=sc.nextInt();
+        double sqrt=Math.sqrt(a);
+        if(sqrt==Math.floor(sqrt)){
+            System.out.println( a + " is perfect sqaure");
+        }
+        else{
+            System.out.println(a+ " is not perfect sqaure");
+        }
+    }
+    
+}
+
+6.Problem Statement
+
+You need to develop a simple Java application to print all factors of a given number. A factor of a number is an integer
+that can be multiplied by another integer to produce the original number. For example, the factors of 12 are 1, 2, 3, 4, 6, and 12.
+Task: Print All Factors of a Given Number
+• Use Scanner to take user input for the number.
+• Use a for loop to iterate through all integers from 1 to the given number.
+• Inside the loop, use an if statement to check if the current integer is a factor of the number.
+• If it is a factor, print the integer.
+Expected Output:
+• Input: 12
+Output:
+Factors of 12 are:
+1
+2
+3
+4
+6
+12
+
+import java.util.Scanner;
+public class factors {
+    public static void main(String[] args) {
+          Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number" );
+        int a=sc.nextInt();
+        System.out.println("factors of " + a + "are :");
+        for(int i=1;i<=a;i++){
+            if(a%i==0){
+                System.out.println(i);
+            }
+        }
+    } 
+}
+
+7.Problem Statement
+
+You need to develop a simple Java application to check if a given number is a prime number.
+A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. This means a 
+prime number is only divisible by 1 and the number itself. For example, 2, 3, 5, 7, 11, and 13 are prime numbers.
+Task: Check if a Given Number is Prime
+• Use Scanner to take user input for the number to be checked.
+• Use an if statement to handle the special case where the number is less than or equal to 1.
+• Use a for loop to check if the number has any divisors other than 1 and itself.
+• If a divisor is found, the number is not prime. Print an appropriate message and exit the loop.
+• If no divisors are found, the number is prime. Print an appropriate message.
+Expected Output:
+• Input: 29
+Output: 29 is a prime number.
+• Input: 15
+Output: 29 is a not prime number.
+
+import java.util.Scanner;
+public class factors {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number" );
+        int a=sc.nextInt();
+        int fact=0;
+        for(int i=1;i<=a;i++){
+            if(a%i==0){
+                fact++;
+            }
+        }
+        if(fact==2){
+            System.out.println(a+ " is a prime number");
+        }
+        else{
+            System.out.println(a + " is not a prime number");
+        } 
+    } 
+}
+
+
+
+
+
