@@ -1,0 +1,39 @@
+->OOP is an approach to solve real world problems with the help of programs.The progrmming representation of real world entity is known as object and it is created by jvm and
+it needs two informations about object.
+1.State -it is defined as its properties and represented by instance varaibles.
+Instance variables-Variables that are declared inside the class and outside the method
+Local variables-variables that are declared inside the method
+2.Behaviour-it is defined as actions performed by the object and can be represented by non-static methods
+Class- A template or buleprint using which jvm can create objects.
+-> we need to instruct jvm to create an object ,we must use new keyword. Objects in java are allotted in heap memory
+->reference variable: a variable which can hold address of an object
+ex: Student st=new Student();--> here st is ref var.
+->. operator is used to enter an objec and helps in accessing the states and behavious.
+->Objects whose address is not stored by reference variable are considered as garbage collection.
+NOTE:
+1.whenever method is called stackframe will created in stack memory
+2.whenever object is created it will in heap memory 
+3.Without main  a progrm will compiled but not excuted
+
+
+EX-1:Creation of student Object
+public class Student {
+	String name;
+	int age;
+	String city;
+	public void learn() {
+		System.out.println("Student learns java");
+	}
+}
+class StudentApp {
+	public static void main(String[]args) {
+		Student st=new Student();
+		st.name="anusha";
+		st.age=21;
+		st.city="Bangalore";
+		st.learn();
+		System.out.println("Name" +st.name);
+		System.out.println("age" +st.age);
+		System.out.println("city" +st.city);
+	}
+}
