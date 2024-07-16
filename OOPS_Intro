@@ -37,3 +37,48 @@ class StudentApp {
 		System.out.println("city" +st.city);
 	}
 }
+Ex-2: cReating two objects
+
+package demo;
+public class EmployeeApp {
+	public static void main(String[] args) {
+		 Employee E1=new Employee();
+	        E1.id=51;
+	        E1.name="Anusha";
+	        E1.department="EEE";
+	        E1.yerasOfExperience=4;
+	        E1.work();
+	        E1.attendMeeting();
+	        System.out.println("id :" +E1.id);
+	        System.out.println("name :" +E1.name);
+	        System.out.println("department :" +E1.department);
+	        System.out.println("yerasofexperience :" +E1.yerasOfExperience);
+	        System.out.println();
+	        System.out.println("Accessing 2ndemployee:");
+
+	       Employee E2=new Employee();
+	        E2.id=31;
+	        E2.name="Renu";
+	        E2.department="CSE";
+	        E2.yerasOfExperience=5;
+	        E2.work();
+	        E2.attendMeeting();
+	        System.out.println("id :" +E2.id);
+	        System.out.println("name :" +E2.name);
+	        System.out.println("department :" +E2.department);
+	        System.out.println("yerasofexperience :" +E2.yerasOfExperience);
+	}
+}
+public class Employee {
+	int id;
+    String name;
+    String department;
+    int yerasOfExperience;
+    public void work(){
+        System.out.println("developers are working on project");
+    }
+    public void attendMeeting(){
+        System.out.println("Software engineers attends meeting");
+}
+}
+
