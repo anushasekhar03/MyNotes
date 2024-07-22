@@ -1,0 +1,21 @@
+Wrapper class
+->In java, W.C provide a way to use primitive data types (like int,char,booelan, etc..)as Objects(Integer,Character etc..), this is becuase Collections store only Objects.
+For Every primitive type There is a wrapper class in java
+byte-Byte
+short-Short
+int-Integer
+long-Long
+char-Character
+float-Float
+double-Double
+boolean-Boolean
+BOXING-Conversion of primitive type into objects
+int x=10;
+Integer obj=new Integer(x);
+UNBOXING: Conversion of Object type to Primitive type
+int x=obj,intValue();
+AUTOBOXING:Auto Conversion of boxing
+int x=10;
+Integer obj=x;
+AUTO-UNBOXING:Auto Conversion of UN-boxing
+int x=obj;
