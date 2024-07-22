@@ -1,0 +1,38 @@
+->Linked list implements list
+->Linked list allow duplicates and ordered collection.
+->L.L store elements in the form of nodes and connect with links.
+
+
+import java.util.LinkedList;
+class Demo{
+public static void main(String[] args){
+LinkedList<String> linkedList = new LinkedList<>();
+linkedList.add("Apple");
+linkedList.add("Banana");
+linkedList.add("Orange");
+linkedList.addFirst("Mango");
+linkedList.addLast("Grapes");
+System.out.println("LinkedList: " + linkedList);
+// Retrieving 
+String first = linkedList.getFirst();
+String last = linkedList.getLast();
+System.out.println("First: " + first);
+System.out.println("Last: " + last);
+String element = linkedList.get(2);
+System.out.println("Element at position 2: " + element)
+// Searching 
+boolean containsBanana = linkedList.contains("Banana");
+System.out.println("Contains Banana: " + containsBanana);
+linkedList.removeFirst();
+linkedList.removeLast();
+System.out.println("Removing first and last elements: " + linkedList);
+linkedList.remove(1);
+System.out.println("LinkedList after removing : " + linkedList);
+boolean isEmpty = linkedList.isEmpty();
+System.out.println("Is Empty: " + isEmpty);
+int size = linkedList.size();
+System.out.println("Size: " + size);
+linkedList.clear();
+System.out.println("LinkedList after clearing all elements: " + linkedList);
+}
+}
