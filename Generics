@@ -1,0 +1,23 @@
+GENERICS
+->As we know collections store only objects, Generics are parametrized types and are used what type of objects of allowed to store in a collection.
+1.Collection without Geberics:allows any type of objects
+ex:
+Collection c=new Collection();
+c.add(10);
+c.add("Anu");
+c.add(23.9);
+
+2.Collection with Geberics:allows only specific   type of data objects
+ex:
+Collection <Integer>=new Collection<Integer>();
+c.add(10);
+c.add("Anu");//error
+
+3.Collection with Generics that allows any type of object:
+Syntax:
+Collection<Object> c = new Collection<Object>();
+c.add(10);
+c.add(“java”); 
+c.add(23.45);
+
+NOTE: Object is the super class of all classes in Java
