@@ -1,0 +1,57 @@
+->ArrayList is an ordered collection and allow duplicates
+->It is index based
+->Processing elements much faster
+->Insertion and deletions are slower.
+
+Program to display ArrayList and its size:
+• add() method is used to append element to the list.
+• size() method returns the length of list.
+import java.util.*;
+class Code
+{
+public static void main(String[] args) {
+List<Integer> list = new ArrayList<Integer>();
+list.add(10);
+list.add(20);
+list.add(30);
+list.add(40);
+list.add(50);
+System.out.println("List is : " + list);
+System.out.println("Size is : " + list.size());
+}
+}
+
+Program to check whether the list contains element or not: contains() method returns true if 
+the list has specified element.
+import java.util.*;
+class Code
+{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+List<Integer> list = new ArrayList<Integer>();
+for(int i=1 ; i<=5 ; i++)
+list.add(i);
+System.out.println("List is : " + list);
+System.out.print("Enter element to check in list : ");
+int ele = sc.nextInt();
+if(list.contains(ele))
+System.out.println("Yes element is present in list");
+else
+System.out.println("No such element in list");
+}
+}
+
+Program to check the list is empty or not:
+• isEmpty() method returns true if the list doesn’t contains elements else returns false
+import java.util.*;
+class Code
+{
+public static void main(String[] args) {
+List<Integer> list = new ArrayList<Integer>();
+if(list.isEmpty())
+System.out.println("List is empty");
+else
+System.out.println("List contains elements");
+}
+}
+
