@@ -1,0 +1,151 @@
+->ArrayList is an ordered collection and allow duplicates
+->It is index based
+->Processing elements much faster
+->Insertion and deletions are slower.
+
+Program to display ArrayList and its size:
+• add() method is used to append element to the list.
+• size() method returns the length of list.
+import java.util.*;
+class Code
+{
+public static void main(String[] args) {
+List<Integer> list = new ArrayList<Integer>();
+list.add(10);
+list.add(20);
+list.add(30);
+list.add(40);
+list.add(50);
+System.out.println("List is : " + list);
+System.out.println("Size is : " + list.size());
+}
+}
+
+Program to check whether the list contains element or not: contains() method returns true if 
+the list has specified element.
+import java.util.*;
+class Code
+{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+List<Integer> list = new ArrayList<Integer>();
+for(int i=1 ; i<=5 ; i++)
+list.add(i);
+System.out.println("List is : " + list);
+System.out.print("Enter element to check in list : ");
+int ele = sc.nextInt();
+if(list.contains(ele))
+System.out.println("Yes element is present in list");
+else
+System.out.println("No such element in list");
+}
+}
+
+Program to check the list is empty or not:
+• isEmpty() method returns true if the list doesn’t contains elements else returns false
+import java.util.*;
+class Code
+{
+public static void main(String[] args) {
+List<Integer> list = new ArrayList<Integer>();
+if(list.isEmpty())
+System.out.println("List is empty");
+else
+System.out.println("List contains elements");
+}
+}
+
+
+ArrayList -Case Studies and operatuons
+package Hashing;
+import java.util.*;
+
+public class ArraylistOperations {
+
+	public static void main(String[] args) {
+		List<Integer>list=new ArrayList<>();
+		Scanner sc=new Scanner(System.in);
+		while(true) {
+			System.out.println("1.Append");
+			System.out.println("2.Insert");
+			System.out.println("3.Replace");
+			System.out.println("4.Remove");
+			System.out.println("5.Display");
+			System.out.println("6.Sort");
+			System.out.println("7.Reverse");
+			System.out.println("8.Quit");
+			System.out.println("Enter your choice");
+			int c=sc.nextInt();
+			if(c==1) {
+				System.out.println("enter element to append");
+				int ele=sc.nextInt();
+				list.add(ele);
+				System.out.println("elment added");
+			}
+			else if(c==2) {
+				System.out.println("enter index : ");
+				int index=sc.nextInt();
+				if(index>=0 && index<=list.size()-1) {
+					System.out.println("Enter element");
+					int ele1=sc.nextInt();
+					list.add(index,ele1);
+					System.out.println("elemnt is inserted");
+				}
+				else {
+					System.out.println("No such location");
+				}
+			}
+			else if(c==3) {
+				System.out.println("Enter element to replace: ");
+				int ele3=sc.nextInt();
+				if(list.contains(ele3)) {
+				int index=list.indexOf(ele3);
+				System.out.println("Enter new element");
+				int x=sc.nextInt();
+				list.set(index, x);
+				System.out.println("eelement replaced");
+			}
+				else {
+					System.out.println("No such elemnt in list");
+				}
+		}
+			else if(c==4) {
+				System.out.println("enter elment to remove");
+				int ele4=sc.nextInt();
+				if(list.contains(ele4)){
+					int index=list.indexOf(ele4);
+					list.remove(index);
+					System.out.println("Elemnet removed");
+				}
+				else {
+					System.out.println("No such elemnt to remove");
+				}
+				
+			}
+			else if(c==5) {
+				if(list.isEmpty()) {
+					System.out.println("Empty list");
+				}
+				else {
+					System.out.println("list : "+ list);
+				}
+			}
+			else if(c==6) {
+				Collections.sort(list);
+				System.out.println("list is sorted");
+			}
+			else if(c==7) {
+				Collections.reverse(list);
+				System.out.println("List is reversed");
+			}
+			else if(c==8) {
+				System.out.println("END");
+				System.exit(1);
+			}
+			else {
+				System.out.println("Invalid choice");
+			}
+		}
+	}
+}
+
