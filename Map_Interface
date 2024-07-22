@@ -1,0 +1,22 @@
+MAP:
+->Stores values using keys
+->keys must be unique in map
+->Values can be duplicated
+
+package Hashing;
+import java.util.*;
+public class Maap {
+	public static void main(String[] args) {
+		Map<Integer,String>map=new HashMap<>();
+		map.put(1, "anusha");
+		map.put(2, "lokesh");
+		map.put(3, "rathna");
+		map.put(4, "sekhar");
+		System.out.println(map);
+	}
+}
+IMPLEMENTATIONS:
+1.hashMap
+2.Linkedhashmap
+3.TreeMap
+4.hashtable
