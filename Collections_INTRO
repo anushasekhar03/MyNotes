@@ -3,7 +3,8 @@ COLLECTION:
 
 Collection Framework: 
 ->Java Collections are Set of Interfaces and Classes in Java. Collection frameworks provides impementation of Data Stuctures and algorithms by which we can store and process
-information without implementing them .These are present in java.util package, It offers wide range of data Stuctures like lists,set maps,queues,along with algorithms for common operations like seraching and sorting.
+information without implementing them .These are present in java.util package, It offers wide range of data Stuctures like lists,set maps,queues,along with algorithms for
+common operations like seraching and sorting.
 KEY COMPONENTS:
 ->Interfaces: Collection, List, Set, Queue, Map
 ->Implementations:These are classes that implement Interfaces EX: ArrayList, LinkedList, hashSet, TreeSet, hashMap, TreeMap, PriorityQueue and ArrayDeque
