@@ -1,0 +1,34 @@
+COLLECTION:
+->Collection is a group of objects.Ex:List,set,Queue
+
+Collection Framework: 
+->Java Collections are Set of Interfaces and Classes in Java. Collection frameworks provides impementation of Data Stuctures and algorithms by which we can store and process
+information without implementing them .These are present in java.util package, It offers wide range of data Stuctures like lists,set maps,queues,along with algorithms for common operations like seraching and sorting.
+KEY COMPONENTS:
+->Interfaces: Collection, List, Set, Queue, Map
+->Implementations:These are classes that implement Interfaces EX: ArrayList, LinkedList, hashSet, TreeSet, hashMap, TreeMap, PriorityQueue and ArrayDeque
+->Algorithms:Searching nd Sorting
+
+Array and Collection:
+->Array is static and fixed size
+->Collection is dynamic - size grows and shrinks with insertions and deletions. 
+LIST: index based,allow duplicates
+SET : not index based, Does not allow duplicates
+MAP : Not index based ,Stores element using keys.Keys must be unique, elements can be duplicated
+
+List Implemented by:
+1.Arraylist
+2.Vector
+3.Stack
+4.LinkedList
+Set Implemented by:
+1.hashSet
+2.LinkedHashset
+3.TreeSet
+Map implemented by:
+1.hashTable
+2.hashMap
+3.Linkedhashmap
+4.TreeMap
+Queue implemented by:
+priority queue
