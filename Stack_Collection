@@ -1,0 +1,65 @@
+STACK:
+->Stack is an extension of Vector class
+->It follows LIFO, FILO
+Methods:
+1.boolean empty():
+2.Object peek():
+3.Object pop():
+4.void oush(Object e):
+
+
+STACK OPERATIONS:
+package Hashing;
+import java.util.*;
+import java.util.Stack;
+
+public class FILO {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Stack<Integer>stk=new Stack<Integer>();
+		while(true) {
+			System.out.println("1.push \n 2.pop \n 3.display \n 4.peek \n 5.quit");
+			System.out.println("Enter your choice : ");
+			int c=sc.nextInt();
+			if(c==1) {
+				System.out.println("Enter elemnt to push");
+				int num=sc.nextInt();
+				stk.push(num);
+				System.out.println("Element pushed into stack");
+			}
+			else if (c==2) {
+				if(stk.empty()) {
+				System.out.println("Stack is empty");
+			}
+				else {
+					System.out.println(stk.pop());
+				}
+		}
+			else  if(c==3) {
+				if(stk.empty()) {
+				System.out.println("Stack is empty");
+				}
+			else {
+				
+					System.out.println(stk);
+				}
+			}
+			else if (c==4) {
+				if(stk.empty()) {
+				System.out.println("Stack is empty");
+			}
+				else {
+					System.out.println("stk.peek : "+ stk.peek());
+				}
+		}
+			else if (c==5) {
+				System.exit(1);
+				
+			}
+				else {
+					System.out.println("Invlid choice");
+				}
+		}
+	}
+}
