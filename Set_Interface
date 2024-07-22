@@ -1,0 +1,55 @@
+->Set is not index based
+->Set is does not allow duplicates
+Implementations:
+1.Hashset
+2.LinkedHashSet
+3.TreeSet
+
+1.Program to store elements into HashSet and display: 
+import java.util.*;
+class Code {
+public static void main(String[] args) {
+Set<Integer> set = new HashSet<Integer>();
+set.add(50);
+set.add(40);
+set.add(30);
+set.add(20);
+set.add(10);
+System.out.println("Set : " + set);
+}
+}
+Output: Random order of element
+
+2.Program to store elements into TreeSet and display:
+import java.util.*;
+class Code {
+public static void main(String[] args) {
+Set<Integer> set = new TreeSet<Integer>();
+set.add(50);
+set.add(40);
+set.add(30);
+set.add(20);
+set.add(10);
+System.out.println("Set : " + set);
+}
+}
+Output: 10, 20, 30, 40, 50
+
+3.Remove duplicates in ArrayList:
+• ArrayList is ordered and allow duplicates.
+• To remove duplicates in array, we simply convert into Set and display
+import java.util.*;
+class Code {
+public static void main(String[] args) {
+List<Integer> list = new ArrayList<Integer>();
+for(int i=1 ; i<=4 ; i++) {
+list.add(i+2);
+list.add(i+3);
+}
+System.out.println("List : " + list);
+Set<Integer> set = new HashSet<Integer>(list);
+System.out.println("Set : " + set);
+}
+}
+Output: List : [3, 4, 4, 5, 5, 6, 6, 7]
+ Set : [3, 4, 5, 6, 7]
