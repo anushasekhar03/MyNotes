@@ -1,0 +1,35 @@
+Static keyword:
+->if we make a variable as static it will be same for all object irrespective of what object is we r using.
+->when we have static keyword use class name or object name, both will work ...we will prefer to have class name
+->to access static variable we dont need object, thtas why main method is static
+Non-satic variable: A variable which is different for ll objects
+->We can only access static keyword inside the static method only.
+- >Static member is accessed without creating object.
+EX:
+package demo;
+public class StaticDemo {
+	public static void main(String[] args) {
+		System.out.println(practice.x);
+		practice.fun1();
+		practice pra=new practice();
+		pra.fun2();
+	}
+}
+class practice{
+	static int x=10;   //static variable
+	public static void fun1() {
+		System.out.println("Boy is playing games");
+	}
+	int y=20;
+	public void fun2() {
+		System.out.println("Girl is playing");
+	}
+}
+Static variable: static int x=100; //it is independent object nd we can use this by class name as well as object
+int b=20; //dependent of object and we can use this by object
+
+Static methos:
+->we can use static variable inside the static method but not non-static methods, bjut we hve obj ref then we can use non-static
+
+Static -Block:
+->s.b call only once irrespective of how mny objects will be craeted
