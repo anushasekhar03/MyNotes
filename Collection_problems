@@ -1,0 +1,170 @@
+EX 1: Display even count and odd count in the list
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list=new ArrayList<>();
+        list.add(13);
+        list.add(22);
+        list.add(96);
+        list.add(23);
+        list.add(13);
+        list.add(76);
+        list.add(22);
+        list.add(45);
+        list.add(47);
+        System.out.println(list);
+        System.out.println("reversed list :");
+        int evencount=0;
+        int oddcount=0;
+        for(int i=list.size()-1;i>=0;i--){
+            if(list.get(i)%2==0){
+                evencount++; 
+            }
+            else{
+                oddcount++;
+            }
+        }
+        System.out.println("evencount : " + evencount);
+        System.out.println("oddcount : " + oddcount);
+}
+}
+
+
+EX:2 -Display only first even number in the given list
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list=new ArrayList<>();
+        list.add(13);
+        list.add(22);
+        list.add(96);
+        list.add(23);
+        list.add(13);
+        list.add(76);
+        list.add(22);
+        list.add(45);
+        list.add(47);
+        System.out.println(list);
+        int num;
+        for(int i=0;i<=list.size();i++){
+            if(list.get(i)%2==0){
+                 num=list.get(i);
+                 
+                    System.out.println(num);
+                    break;
+        }     
+}
+}
+}
+
+
+3.. Display last odd number in the given list
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list=new ArrayList<>();
+        list.add(13);
+        list.add(22);
+        list.add(96);
+        list.add(23);
+        list.add(13);
+        list.add(76);
+        list.add(22);
+        list.add(45);
+        list.add(47);
+        System.out.println(list);
+        int num;
+        for(int i=list.size()-1;i>=0;i--){
+            if(list.get(i)%2!=0){
+                 num=list.get(i);
+                    System.out.println("Odd number from last is : " + num);
+                    break;
+        }     
+}
+}
+}
+
+EX:3-Find the sum of all elements in the list
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list=new ArrayList<>();
+        list.add(13);
+        list.add(22);
+        list.add(96);
+        list.add(23);
+        list.add(13);
+        list.add(76);
+        list.add(22);
+        list.add(45);
+        list.add(47);
+        System.out.println(list);
+        int sum=0;
+        for(int i=list.size()-1;i>=0;i--){
+            sum=sum+list.get(i);       
+        }     
+        System.out.println("Sum of numbers in the list is:  " + sum);
+}
+}
+
+
+EX:4-Find the sum of elements in the list which are divisible by 2 but not with 3
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list=new ArrayList<>();
+        list.add(13);
+        list.add(22);
+        list.add(96);
+        list.add(23);
+        list.add(13);
+        list.add(76);
+        list.add(22);
+        list.add(45);
+        list.add(47);
+        System.out.println(list);
+        int sum=0;
+        for(int i=list.size()-1;i>=0;i--){
+            if(list.get(i)%2==0 && list.get(i)%3!=0){ 
+            System.out.println(list.get(i));
+        }     
+    }
+}
+}
+
+EX: 5-Find the sum of even numbers and odd number of given list
+
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list=new ArrayList<>();
+        list.add(13);
+        list.add(22);
+        list.add(96);
+        list.add(23);
+        list.add(13);
+        list.add(76);
+        list.add(22);
+        list.add(45);
+        list.add(47);
+        System.out.println("List " +list);
+        int evensum=0;
+        int oddsum=0;
+        for(int i=0;i<=list.size()-1;i++){
+           if(list.get(i)%2==0){
+            System.out.print(list.get(i)+ " ");
+            evensum+=list.get(i);
+           }
+            else if(list.get(i)%2!=0){
+            System.out.println(list.get(i));
+            oddsum+=list.get(i);   
+         }
+           }
+        
+        System.out.println("Even sum is :"  + evensum);
+        System.out.println("Odd sum is : " + oddsum);     
+    }
+}
+
+EX:6-Find the biggest element in the given list
+
