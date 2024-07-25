@@ -1,0 +1,154 @@
+1.Program to display the size of list
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list=new ArrayList<>();
+        list.add(13);
+        list.add(22);
+        list.add(96);
+        list.add(23);
+        list.add(13);
+        list.add(76);
+        list.add(22);
+        list.add(45);
+        list.add(47);
+        System.out.println("List " +list);
+        int n=list.size();
+ System.out.println("size of the list is " +n);
+
+2.Program to check the list is empty or not
+  System.out.println(list);
+        if(list.isEmpty()){
+            System.out.println("list is empty");
+        }
+        else{
+            System.out.println("list contains elemnets");
+        }
+
+3.Program to add element to list at particular location
+list.set(2,227);
+
+
+4. Program to check the list is empty or not without isEmpty() method.
+ System.out.println("List " +list);
+        int n=list.size();
+        System.out.println(n);
+       if(list.size()==0){
+        System.out.println("list is empty");
+       }
+       else{
+        System.out.println("not empty");
+       }
+
+
+5.Write a method to remove duplicates from a list
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list=new ArrayList<>();
+        list.add(13);
+        list.add(22);
+        list.add(96);
+        list.add(23);
+        list.add(13);
+        list.add(76);
+        list.add(22);
+        list.add(45);
+        list.add(47);
+        System.out.println("List " +list);
+        Set<Integer>set=new LinkedHashSet<>(list);
+        System.out.println(set);
+        }
+    }
+6.Given two lists, write a function to merge them into a single sorted list.
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list1=new ArrayList<>();
+        list1.add(13);
+        list1.add(22);
+        list1.add(96);
+        list1.add(23);
+        System.out.println("List1 " +list1);
+        List<Integer>list2=new ArrayList<>();
+        list2.add(13);
+        list2.add(76);
+        list2.add(22);
+        list2.add(45);
+        list2.add(47);
+        System.out.println("List2 " +list2);
+       list1.addAll(list2);
+       System.out.println(list1);
+        }
+    }
+
+7.Write a function to find the average of elements in a list.
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list1=new ArrayList<>();
+        list1.add(13);
+        list1.add(22);
+        list1.add(96);
+        list1.add(23);
+        list1.add(76);
+    
+    System.out.println(list1);
+    int s=list1.size();
+    double avg=0;
+    for(int i=0;i<s;i++){
+        avg=avg+(list1.get(i)/s); 
+    }
+    System.out.println(avg);
+        }
+    }
+
+8.Write a program to sort a list of strings in alphabetical order
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
+public class liStrings {
+    public static void main(String[] args) {
+         List<String>list=new ArrayList<>();
+         list.add("Anusha");
+         list.add("Renu");
+         list.add("Lok");
+         list.add("Bharath");
+         System.out.println(list);
+         Collections.sort(list);
+         System.out.println(list);
+    }
+    
+}
+
+9.Create a method to count the occurrences of a specific element in a list
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list1=new ArrayList<>();
+        list1.add(13);
+        list1.add(22);
+        list1.add(96);
+        list1.add(23);
+        list1.add(76);
+        list1.add(76);
+        list1.add(76);
+        int count=0;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number to count in the list");
+        int num=sc.nextInt();
+        for(int ele:list1){
+        if(ele==num){
+            count++;
+        }
+        System.out.println(num+ " :" + count);
+            
+        }
+        }
+    }
+    
+
+        
+
+
+
