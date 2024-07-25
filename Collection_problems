@@ -133,7 +133,6 @@ public class listpractice {
 }
 
 EX: 5-Find the sum of even numbers and odd number of given list
-
 import java.util.*;
 public class listpractice {
         public static void main(String[] args) {
@@ -167,4 +166,116 @@ public class listpractice {
 }
 
 EX:6-Find the biggest element in the given list
+import java.util.*;
+public class listpractice {
+        public static void main(String[] args) {
+        List<Integer>list=new ArrayList<>();
+        list.add(13);
+        list.add(22);
+        list.add(96);
+        list.add(23);
+        list.add(13);
+        list.add(76);
+        list.add(22);
+        list.add(45);
+        list.add(47);
+        System.out.println("List " +list);
+        int min=list.get(0);
+        for(int i=0;i<=list.size()-1;i++){
+            if(list.get(i)<min){
+                min=list.get(i);
+            }
+        }
+        System.out.println(min);
+}
+}
+
+EX:7-Display employees suin for each loop
+import java.util.*;
+public class Emplo {
+    public static void main(String[] args) {
+        int ids[]={1,2,3,4,5};
+        String[]names={"anu","renu","sai","deepa","lok"};
+        int []salary={200000,49999,78900,56889,34577};
+        int depName[]={10,20,30,40,50};
+        int age[]={21,22,43,56,32};
+        List<Employeee>employes=new ArrayList<>();
+        for(int i=0;i<ids.length;i++){
+       Employeee e=new Employeee(ids[i],names[i],salary[i],depName[i],age[i]);
+       employes.add(e);
+        }
+        for (Employeee e : employes) {
+            System.out.println("ID: " + e.id + ", Name: " + e.name + ", Salary: " + e.salary + ", Dept: " + e.deptNum + ", Age: " + e.age);
+        }
+        
+        
+}
+}
+class Employeee{
+    int id;
+    String name;
+    int salary;
+    int deptNum;
+    int age;
+    public Employeee(int id, String name, int salary, int deptNum, int age) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+        this.deptNum = deptNum;
+        this.age = age;
+    }
+}
+
+EX:8:display using iterator
+import java.util.*;
+public class Emplo {
+    public static void main(String[] args) {
+        int ids[]={1,2,3,4,5};
+        String[]names={"anu","renu","sai","deepa","lok"};
+        int []salary={200000,49999,78900,56889,34577};
+        int depName[]={10,20,30,40,50};
+        int age[]={21,22,43,56,32};
+        List<Employeee>employes=new ArrayList<>();
+        for(int i=ids.length-1;i>=0;i--){
+       Employeee e=new Employeee(ids[i],names[i],salary[i],depName[i],age[i]);
+       employes.add(e);
+        }
+        Iterator itr=employes.iterator();
+        while(itr.hasNext()){
+            System.out.println(itr.next());
+        }     
+}
+}
+class Employeee{
+    int id;
+    String name;
+    int salary;
+    int deptNum;
+    int age;
+    public Employeee(int id, String name, int salary, int deptNum, int age) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+        this.deptNum = deptNum;
+        this.age = age;
+    }
+    public String toString() {
+        return "ID: " + id + ", Name: " + name + ", Salary: " + salary + ", Dept: " + deptNum + ", Age: " + age;
+    }
+}
+
+EX:9-to dispaly employee details where id=1
+for (Employeee e : employes) {
+            if(e.id==1){
+                System.out.println(e);
+                break;
+}
+}
+
+
+
+
+
+
+
 
