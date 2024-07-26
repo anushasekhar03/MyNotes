@@ -1,0 +1,33 @@
+INHERITANCE:
+->Inheritance is a pillar of OOP which enables a class tobaquirevthe properties and behaviours of another class.
+->In java inheritance is also knoen as is-A-relationship and can be acheived with help of extend keyword.
+
+
+//Parent class
+class Player {
+    String hobby = "sports";
+    public void play() {
+        System.out.println("Play sports!");
+    }
+}
+
+//Child class
+class Cricketer extends Player {
+    // Inherits everything from Player
+}
+//Child class
+class Footballer extends Player {
+    // Inherits everything from Player
+}
+
+class Main {
+    public static void main(String[] args) {
+        Cricketer c = new Cricketer();
+        System.out.println("Cricketer's hobby: " + c.hobby);
+        c.play();
+        
+        Footballer f = new Footballer();
+        System.out.println("Footballer's hobby: " + f.hobby);
+        f.play();
+    }
+}
