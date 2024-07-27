@@ -1,0 +1,29 @@
+1.Reverse a String
+public class rev {
+    public static void main(String[] args) {
+        String str="hello";
+        String s=" ";
+        char ch[]=str.toCharArray();
+        for(int i=ch.length-1;i>0;i++){
+            
+            System.out.println(str.charAt(i) + " ");
+        } 
+    }
+}
+ //Using recursion
+import java.util.*;
+import java.util.Collection;
+public class rev {
+    public static void main(String[] args) {
+        String str="hello";
+        String res=reverse(str);
+        System.out.println(res);
+    }
+     static String reverse(String str){
+        if(str.isEmpty()){
+            return str;
+        }
+        return reverse(str.substring(1)) + str.charAt(0);
+    }
+}
+
