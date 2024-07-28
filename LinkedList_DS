@@ -1,0 +1,83 @@
+->Linked is a linear datastructure
+->elements are not stored in contigous memory and size can be resizable at any moment
+->Used in ds like Stack, queue and in real life used in browser like a tab
+->Head: a reference varaible thets point to the very first node
+->Tail: a reference variable that point to the last node.
+->EX: github-repositories-projects-mynotes-java
+   3->4->7->9->null
+->here 3 is head and 9 is tail
+
+STUCTURE:
+class Node{
+    int data;
+    Node next;
+    public Node(int data, Node next) {
+        this.data = data;
+        this.next = next;
+    }
+    Node(int data1){
+        this.data=data1;
+        this.next=null;
+    }
+}
+
+#CODE:
+public class TestStructure {
+    public static void main(String[] args) {
+        LL list = new LL();
+        list.insertFirst(6);
+        list.insertFirst(9);
+        list.insertFirst(4);
+        list.insertFirst(2);
+        list.display();
+        System.out.println(list + " -> "); 
+    }
+} class LL{
+    private Node head;
+    private Node tail;
+    int size=0;
+    public LL() {
+    }
+private class Node{
+    private int value;
+    private Node next;
+    public Node(int value, Node next) {
+        this.value = value;
+        this.next = next;
+    }
+    public Node(int value) {
+        this.value = value;
+    }
+}
+public  void insertFirst(int value){ //inserting element at first
+    Node node=new Node(value);
+    node.next=head;
+    head=node;
+    if(tail==null){
+        tail=node;
+    }
+    size++;
+}
+public void insertLast(int value){ //inserting element in last
+    if(tail==null){
+        insertFirst(value);
+        return;
+    }
+    Node node=new Node(value);
+    tail.next=node;
+    tail=node;
+    size++;
+   
+}
+public void display(){
+    Node temp=head;
+    while(temp!=null){
+        System.out.print(temp.value + " -> ");
+        temp=temp.next;
+}
+   System.out.println("End");
+    
+}
+
+}
+
