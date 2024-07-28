@@ -10,7 +10,7 @@ public class rev {
         } 
     }
 }
- //Using recursion
+ // Using recursion
 import java.util.*;
 import java.util.Collection;
 public class rev {
@@ -24,6 +24,86 @@ public class rev {
             return str;
         }
         return reverse(str.substring(1)) + str.charAt(0);
+    }
+}
+
+// using string builder
+import java.util.*;
+public class demoone {
+    public static void main(String[] args) {
+        String str="anusha";
+        System.out.println(reverse(str));  
+    }
+public static String reverse(String str){
+    StringBuilder sb=new StringBuilder(str);
+     return sb.reverse().toString();
+}   
+}
+
+2.palindrome
+import java.util.*;
+public class demoone {
+    public static void main(String[] args) {
+        String str="madam";
+        System.out.println(palindrome(str)) ;   
+    }
+    public static boolean palindrome(String str){
+        int start=0;
+        int end=str.length()-1;
+        while(start<end){
+            if(str.charAt(start)!=str.charAt(end)){
+                return false;
+            }
+                start++;
+                end--;
+            }
+        return true;
+        }
+    }
+
+
+3.count no.of vowels and consonents
+import java.util.*;
+public class demoone {
+    public static void main(String[] args) {
+        String str="anusha";
+        count(str) ;
+    }
+    public static void count(String str){
+        int vowels=0;
+        int consonents=0;
+        String linput=str.toLowerCase();
+        for(int i=0;i<linput.length();i++){
+        char ch=str.charAt(i);
+        if(ch=='a' || ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+            vowels++;
+        }
+        consonents++;
+        }
+        System.out.println("Vowels: " +vowels);
+        System.out.println("consonents: "+ consonents);
+    }
+}
+
+4.remove duplicates
+import java.util.HashSet;
+import java.util.Set;
+
+public class demoone {
+    public static void main(String[] args) {
+        String str = "anusha";
+        System.out.println(count(str));
+    }
+    public static String count(String str) {
+        Set<Character> set = new HashSet<>();
+        StringBuilder sb = new StringBuilder();
+        for (char c : str.toCharArray()) {
+            if (!set.contains(c)) {
+                set.add(c);
+                sb.append(c);
+            }
+        }
+        return sb.toString();
     }
 }
 
