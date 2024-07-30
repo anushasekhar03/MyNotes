@@ -199,4 +199,45 @@ class Main
   }
 }
 
+
+5.MULTIPLE INHERITANCE -if a single class is tries to inherit multiple parent classes
+class A {
+    void display() {
+        System.out.println("Display from A");
+    }
+}
+
+class B extends A {
+    void display() {
+        System.out.println("Display from B");
+    }
+}
+
+class C extends A {
+    void display() {
+        System.out.println("Display from C");
+    }
+}
+
+// Hypothetical code, not allowed in Java
+class D extends B, C {
+    // Which display() method should be inherited?
+}
+public class Main {
+    public static void main(String[] args) {
+        D obj = new D();
+        obj.display(); // Ambiguity: Should it call B's display or C's display?
+    }
+}
+
+--> In java multiple inheritance is not suppoerted because of diamond problem
+      A
+/          \
+B           C
+\          /
+      D
+-->The diamond problem is a ambuiguity that arises in multiple inheritance. It  Occurs when a class is inherited from more 
+than one parent class.
+--> The abiguity arises becuase class D inherited from B, C ,which both inherit from A. If D class dispaly (), its unclear 
+that which display method should inherited.
 Override-Inherited from parent class and use after modifying it
