@@ -1,0 +1,40 @@
+FINAL VARIABLE:
+->A final variable is a constant, meaning its value cannot be altered once it is assigned.
+These are used to specify constants in our program, so that they cant be modified.
+public class FinalVariableExample {
+    // Final variable
+    final int MAX_SPEED = 120;
+    public void displaySpeed() {
+        // Trying to change the value of a final variable will result in a compile-time error
+        // MAX_SPEED = 150; // Uncommenting this line will cause an error
+        System.out.println("The maximum speed is: " + MAX_SPEED);
+    }
+
+    public static void main(String[] args) {
+        FinalVariableExample example = new FinalVariableExample();
+        example.displaySpeed();
+    }
+}
+
+FINAL METHOD:
+-> It is a method which cant be overridden from parent class to child class
+class Parent {
+    // Final method
+    final void show() {
+        System.out.println("This is a final method from the Parent class.");
+    }
+}
+class Child extends Parent {
+    // Trying to override the final method will result in a compile-time error
+    // void show() { 
+    //     System.out.println("Attempting to override the final method.");
+    // }
+}
+public class Main {
+    public static void main(String[] args) {
+        Child child = new Child();
+        child.show();
+    }
+}
+
+FINAL CLASS:
