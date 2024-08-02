@@ -30,6 +30,6 @@ class Solution {
         }
         return maxProfit;  // Return the maximum profit found
     }
-}
+
 
  
