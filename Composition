@@ -1,0 +1,30 @@
+Composition is a core principle in object-oriented programming that represents a "has-a" relationship between objects, but with a tighter connection than aggregation.
+This type of relationship suggests that one class is composed of one or more objects from other classes.
+Composition is a fundamental concept in object-oriented programming that describes a "HAS-A" relationship between objects, where one class is made up of one or more 
+objects from other classes, and these contained objects cannot exist independently of the container class. For example, a book has chapters, pages, and text, 
+and these components are essential to the book, with no meaningful existence on their own if the book is destroyed.
+EX:
+public class composition {
+	public static void main(String[] args) {
+		Book myBook= new Book();
+		myBook.chapter.title= "Intro to Java";
+		myBook.chapter.content="Java is a HLL";
+		System.out.println("Reading Chapter : " + myBook.chapter.title);
+		System.out.println("Content: " + myBook.chapter.content);
+		//destroy book object by assigning null
+		myBook=null;
+		System.out.println("Reading Chapter : " + myBook.chapter.title);// null pointer exception
+		System.out.println("Content: " + myBook.chapter.content);
+	}
+}
+class Book{
+	Chapter chapter = new Chapter();
+}
+class Chapter{
+	String title;
+	String content;
+}
+Chapters are integral components of a book, lacking independent meaning or existence outside the book's structure. Removing or adding chapters alters the book, 
+but the chapters themselves do not have a meaningful standalone presence.
+Composition is a way to create closely integrated, coherent code components. It's how you'll build systems where parts are essential to the whole. In the world of
+composition, objects (like book chapters) are inseparable from their container (the book).
