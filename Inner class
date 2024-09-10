@@ -1,0 +1,63 @@
+package Abstraction;
+
+public class Innerclass {
+
+	public static void main(String[] args) {
+		Employee e = new Employee() {
+			void msg() {
+				System.out.println("Inner cls");
+			}
+		};
+	}
+
+}
+abstract class Employee{
+	abstract void msg();
+	
+}
+//static inner class
+
+package Abstraction;
+public class Innerclass3 {
+	public static void main(String[] args) {
+		//creating the object of static inner class using outer class name
+		village.well w= new village.well();
+		w.provideWater();
+		
+	}
+}
+class village{
+	//static inner class
+	static class well{
+		void provideWater() {
+			System.out.println("Providing water");
+		}
+	}
+}
+
+//Local inner class
+package Abstraction;
+
+public class Localinner {
+
+	public static void main(String[] args) {
+		Farm f=new Farm();
+		f.harvestSeason();
+
+	}
+
+}
+class Farm {
+    void harvestSeason() {
+    	//local inner class--the inner class which is parent inside
+    //methods, constructor or any block
+    	//this block only used inside the block specified
+        class SeasonalWorker {
+            void work() {
+                System.out.println("Helping with the harvest!");
+            }
+        }
+        //creating the object of local inner class
+        new SeasonalWorker().work();
+    }
+}
