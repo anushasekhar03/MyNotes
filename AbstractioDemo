@@ -1,0 +1,32 @@
+public class AbtractionDemo {
+        public static void main(String []args){
+            child c= new child();
+            c.display();} }
+    abstract class parent{
+        String name;
+        int age;
+        public parent(){
+            System.out.println("In parent constructor");
+        }
+        void display(){
+            System.out.println("In parent cls");
+        }
+    }
+    class child extends parent{
+        void display(){
+            System.out.println("In child class");
+        }
+}
+
+-->In Java, when you create an object of a child class, the constructor of the parent class is always called first, even if the parent class is not abstract or if the 
+child class overrides methods from the parent class. 
+-->Object Creation: When you create an object of child using new child(), Java first calls the constructor of the parent class (parent). This is because every child
+class implicitly calls its parent class’s constructor to ensure that the parent part of the object is initialized.
+-->Calling the Parent Constructor: In your child class, even though there is no explicit call to the parent constructor, Java automatically inserts a call to the parent
+constructor at the beginning of the child constructor. It is done using an implicit call to super(). This ensures that all the fields and methods defined in the parent
+class are initialized correctly before the child class’s constructor runs.
+-->Why Abstract Classes Don't Affect This: If the parent class were abstract, you still couldn’t create an instance of the parent class directly, but the constructor of the 
+parent class would still be called indirectly when a child class object is created. This is because even abstract classes need their state (fields) to be initialized.
+
+-->In Java, when you create an object of a child class, the constructor of the parent class is always called first to ensure that the parent class part of the object is 
+properly initialized before the child class's constructor logic is executed. This is a fundamental principle in object-oriented programming where inheritance is used.
